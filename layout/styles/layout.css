@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Merriweather', serif;
+    max-width: 1140px;
+    /* background: rgba(211, 211, 211, 0.493); */
+    text-align: center;
+    margin: 2em auto;
+}
+body>header{
+    /* min-height: 25vh; */
+    background: #fff;
+    /* padding: 15% 0 10%; */
+    padding: 3em 0;
+}
+/* Genric values */
+.grid{
+    display: grid;
+    width: 90%; /* parent = 1140px - 90% = 1026px */
+    max-width: inherit;
+    margin: 0 5%;
+}
+.grid>header, .grid> footer{
+    grid-column: 1/4;
+
+}
+/* specific values : */
+.grid.layout-1{
+   
+    grid-template-columns: 20% 60% 20% ; 
+    /*  column #1-left: 20% from parent =200px
+        column #2-center: 60% 600px
+        column #3-right: like column #1
+    */
+    grid-template-rows: 100px 400px 100px;
+   
+}
+.grid.layout-2{
+    grid-template-columns: 80% 20%;
+    grid-template-rows:100px auto 340px 100px;
+}
+.grid.layout-2>nav{
+    grid-column: 1/4;
+    grid-row: 2/3;
+    height: fit-content;
+}
+.grid>*{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #00000094;
+    padding: 1em;
+    font-size: 1rem;
+    color: #00000004;
+    transition: 200ms 200ms color ease-in-out;
+}
+.grid>*:hover{
+    color: rgb(0, 0, 0);
+    transition-delay: 0s;
+}
+.sildes-container{
+    min-height: 100vh;
+    position: relative;
+}
+.slide{
+    position: absolute;
+    opacity: 0;
+    transition: 100ms opacity ease-in-out;
+    transition-delay: 100ms;
+}
+.slide[active-slide]{
+    transition-delay: 0s;
+    z-index: 1;
+    opacity: 1;
+}
+.nav-btn{
+    position: absolute;
+    bottom: 50%;
+    padding: 0.3em 0.5em;
+    background: none;
+    color: #000;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    transition: .5s background-color ease-out ;
+}
+
+.nav-btn:hover, .nav-btn:focus{
+    background: #e7e7e796;
+    border: 1px solid #00000017;
+    
+}
+.nav-btn.left{
+    left: 0em;
+}
+.nav-btn.right{
+    right: 0em;
+}
+body>footer{
+    margin: 1.5em 0;
+    font-weight: bold;
+}
+footer>p>a{
+    text-decoration: none;
+    color: #1a228b;
+}
+/* 
+@media (min-width:800px) {
+    .grid>*{
+        font-size: 1rem;
+    }
+} */

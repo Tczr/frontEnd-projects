@@ -1,0 +1,272 @@
+:root{
+    --font: "Poppins", sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    font-family: var(--font);
+    font-size: 1rem;
+    text-decoration: none;
+    
+}
+main>*{
+    margin-bottom: 5vh;
+}
+body{
+    font-family: var(--font);
+    font-size: 1rem;
+}
+header{
+    /*
+    ** background stack:
+    ** 1. image 
+            position: centered verticlly, right horizontally
+            size:75% from the image x and y
+    ** 2. gradient
+            position: deefult = "0 0"
+            size: full-width and height
+    */
+    background: 
+    linear-gradient(
+        90deg, rgb(26 26 26 /1) 50%,
+        rgb(39 39 39 / .35)
+        ) 100%, 
+        url("../images/food.jpg")center right /75% ;
+
+    padding: 2em;
+    /* background-repeat: no-repeat;
+    background-position: bottom right,0 0; 
+    background-size: 25% 100%; */
+
+    height: 100vh;
+   
+    
+    
+}
+.gradient{
+    width: inherit;
+   
+    background: 
+    linear-gradient(
+        90deg,
+        rgb(26 26 26 / 92%) 60%, 
+        rgb(39 39 39 / 52%)
+    ) 100%;
+}
+
+
+.text-sec{
+    padding: 1em;
+    margin: 5% 2.5em 0;
+    color: #fff;
+}
+
+.text-sec h1+p{
+    
+    max-width: 45ch;
+}
+/* @media (width>=820px) {
+    .text-sec h1+p{
+        max-width: 45ch;
+    }
+} */
+.classic-btn{
+    border: 1px solid #fff;
+    background: linear-gradient(to left, 
+     rgba(255, 255, 255, 0) 35%, 
+      rgba(255, 255, 255, 0.123) 65%) right / 300% 100%;
+    width: 293px;
+    padding: 1em;
+    color: #fff;
+    display: inline-block;
+    transition: 0.5s ease-out;
+}
+.classic-btn:hover{
+    /* background-color: rgba(255, 255, 255, 0.123); */
+    background-position: left;
+}
+
+
+
+.food-sc>h2:first-child, .food-sc>h2+p{
+    text-align: center;
+
+}
+
+.food-sc>h2+p{
+    max-width: 45ch;
+    margin: 1em auto 0;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: rgb(59, 59, 59);
+}
+.meals{
+    margin: 0.6em 0;
+    padding: 1.5em;
+    /* background-color: #D6CDA4; */
+    /* height: calc(100% - 90px); */
+}
+
+.meal-box{
+    margin-top: 2em;
+}
+
+.meal-box:first{
+    margin-top: 0;
+}
+.meals>.meal-box>img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: 92%;
+    border-radius: 50%;
+
+}
+
+.meals>.meal-box>.content{
+    padding: 1.5em;
+    /* background: rgba(255, 255, 255, 0.205); */
+}
+
+.meal-box>.content>h3{
+    font-weight: bold;
+}
+.meal-box>.content>h3+p{
+    max-width: 100ch;
+}
+.view-btn{
+    border:1px solid black;
+    background:linear-gradient(to left, white 50%, black 65% ) right/ 300% 100%;
+    color: black;
+    display: inline-block;
+    padding: .5em 1em;
+    margin-top: 1em;
+    width: fit-content;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: 0.5s background-position ease-out ;
+}
+.view-btn:hover, .view-btn:active{
+    /* background-color: #212121; */
+    background-position: left;
+    color: #fff;
+}
+footer{
+    /* height: 50vh; */
+    background-color: rgb(26 26 26);
+    color: #fff;
+    padding: 1.5em;
+    margin-bottom: 0;
+}
+footer>div{
+    margin: 1.5em;
+}
+footer> .copy-right{
+    font-weight: 300;
+    /* margin: 5% 0 0; */
+    text-align: center;
+}
+
+footer> .copy-right a{
+    color: inherit;
+}
+footer>.fo-container>section:first-child>div{
+    margin-bottom: 1em;
+}
+.link-tag{
+    color: #00ff0a;
+    font-size: .89rem;
+    font-weight: 300;
+    background-color: rgba(255, 255, 255, 0.151);
+    padding: 0.2em;
+    border-radius: 3px;
+    display: inline-block;
+}
+/* .map{
+    background-color: white;
+    width: 275px;
+    height: 170px;
+} */
+.center-verticlly{
+    align-items: center;
+}
+.space-even{
+    justify-content: space-evenly;
+}
+.space-between{
+    justify-content: space-between;
+}
+
+.my-20{
+    margin:20px 0;
+}
+.flex{
+    display: flex;
+}
+.grid{
+    display:grid;
+}
+.col-3
+{
+    grid-template-columns: repeat(3,1fr);    
+}
+.row-2{
+    grid-template-rows: repeat(2,1fr);
+}
+.gap-1{
+    gap: 1vw;
+}
+.gap-2{
+    gap:2vw;
+}
+.gap-3{
+    gap: 3vw;
+}
+.gap-4{
+    gap:4vw;
+}
+.m-1{
+
+    margin:1em;
+}
+.m-2{
+    margin:2em
+}
+.m-y-1{
+    margin:1em 0;
+}
+.m-y-2{
+    margin:2em 0;
+}
+
+
+.mapouter{
+    position:relative;
+    text-align:right;
+    height:200px;
+    width:300px;
+}
+.gmap_canvas 
+{
+    overflow:hidden;
+    background:none!important;
+    height:200px;
+    width:300px;
+}
+.gmap_canvas > iframe{
+    border-radius: 5px;
+}
+
+@media (max-width:600px) {
+    .meal-box.flex{
+        flex-direction: column;
+        align-items: center;
+    }
+}

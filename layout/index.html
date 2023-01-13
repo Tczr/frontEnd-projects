@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <title>Page's structure</title>
+    <link rel="stylesheet" href="./styles/layout.css"/>
+</head>
+<body>
+    <header>
+        <h1>Have you ever thought how web pages are structure</h1>
+        <p>See Our simple example</p>
+    </header>
+
+    <main>
+        <div class="crosual">
+
+            <div class="sildes-container">
+                <ul>
+                    <li class="grid layout-1 slide" active-slide>
+                        <header>
+                            <div>
+                                <h3>header</h3>
+                                <p>A <code>header</code> element describes your page's head that contain your logo and your website name and important links</p>
+                            </div>
+                        </header>
+                        <nav>
+                            <div>
+                                <h3>Nav</h3>
+                                <p>A <code>Nave</code> element describes your page's navigation that contain your website sections or links</p>
+                            </div>
+                        </nav>
+                        <section>
+                            <div>
+                                <h3>Main</h3>
+                                <p>A <code>Main</code> element describes your page's main content that contain all of your content that you see in all the page </p>
+                            </div>
+                        </section>
+                        <aside>
+                            <div>
+                                <h3>Aside</h3>
+                                <p>An <code>Aside</code> element describes your page's sidebar that may contain different things usually contain Ads or index of  the page </p>
+                            </div>
+                        </aside>
+                        <footer>
+                            <div>
+                                <h3>Footer</h3>
+                                <p>A <code>Footer</code> element describes your page's end</p>
+                            </div>
+                        </footer>
+                    </li>
+
+                    <li class="grid layout-2 slide">
+                        <header>
+                            <div>
+                                <h3>header</h3>
+                                <p>A <code>header</code> element describes your page's head that contain your logo and your website name and important links</p>
+                            </div>
+                        </header>
+                        <nav>
+                            <div>
+                                <h3>Nav</h3>
+                                <p>A <code>Nave</code> element describes your page's navigation that contain your website sections or links</p>
+                            </div>
+                        </nav>
+                        <section>
+                            <div>
+                                <h3>Main</h3>
+                                <p>A <code>Main</code> element describes your page's main content that contain all of your content that you see in all the page </p>
+                            </div>
+                        </section>
+                        <aside>
+                            <div>
+                                <h3>Aside</h3>
+                                <p>An <code>Aside</code> element describes your page's sidebar that may contain different things usually contain Ads or index of  the page </p>
+                            </div>
+                        </aside>
+                        <footer>
+                            <div>
+                                <h3>Footer</h3>
+                                <p>A <code>Footer</code> element describes your page's end</p>
+                            </div>
+                        </footer>
+                    </li>
+                </ul>
+                <button class="left nav-btn" data-crosual-btn="left">
+                    &#8592;
+                </button>
+                
+                <button class="right nav-btn"  data-crosual-btn="right">
+                    &#8594;
+                </button>
+            </div>
+            <div class="crosual-navigator">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>
+            Learn more
+            <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure" 
+            target="_blank">
+                here..
+            </a>
+        </p>
+    </footer>
+    <script src="./script/crosual.js"></script>
+</body>
+</html>
