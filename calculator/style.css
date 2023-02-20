@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', 'Cabin';
+    background: linear-gradient(109.88deg, #3D433E -22.33%, rgba(0, 0, 0, 0.92) -22.32%, rgba(39, 106, 49, 0.58) 97.71%);
+    width: 100%;
+    height: 100vh;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.calculator{
+    background: #FFFFFF;
+    border: 3px solid #000000;
+    box-shadow: -9px 0px 17px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    width: 290px;
+    height: 368px;
+    padding: 0.37em;
+}
+.display_calc{
+    background: #151515;
+    border-radius: 5px;
+    padding: 0.5em 0.9em;
+    color: #FFFFFF;
+    font-size: 1.7rem;
+    text-align: end;
+}
+/* .display_calc::before{
+    content: '|';
+} */
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+    margin: 10px 0.17em 0;
+    height: 78%;
+}
+
+
+.btn{
+    border: 2px solid #000000;
+    padding: 1em;
+    background-color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.btn:hover{
+    cursor: pointer;
+    background:  #99999996;
+}
+.equal-btn{
+    background-color: #383838;
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    grid-row: 4/6;
+    grid-column: 4/5;
+}
+
+.zero-btn
+{
+    grid-column: 1/3;
+}
+.subtract-btn{
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+.add-btn{
+    grid-column: 4/5;
+    grid-row: 3/4;
+}
