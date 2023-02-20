@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <title>المختصر في لغة جافا</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            
+            <header>
+                <h1>تعلم لغة جافا</h1>
+            </header>
+            <ul>
+                <li>
+                    <a class="nav-link nav--main" href="#مقدمة">مقدمة</a>
+                </li>
+                <li>
+                    <a class="nav--main" href="#الأساسيات">الأساسيات</a>
+                </li>
+                <ul class="sub-categories">
+                    <li>
+                        <a class="nav-link" href="#المتغيرات_و_العوامل">المتغيرات و العوامل</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#التكرار">التكرار</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#الأوامر_الشرطية">الأوامر الشرطية</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#المصفوفات_والقوائم">المصفوفات والقوائم</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#الدوال">الدوال</a>
+                    </li>
+                </ul>
+                <!-- <li>
+                    <a  class="nav--main" href="#البرمجة_الموجهه_للعناصر_OOP">البرمجة الموجهه للعناصر <span class="oop-hovering">OOP</span></a>
+                </li>
+                <ul>
+                    <li>
+                        <a class="nav-link" href="#مفهوم_العنصر_أو_الكائن">مفهوم العنصر أو الكائن</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#مفهوم_الفئة_أو_المجموعة">مفهوم الفئة أو المجموعة</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#الوراثة">الوراثة</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#النموذج">النموذج</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#مفهوم_تعدد_الدوال_(التحميل_الزائد)">مفهوم تعدد الدوال (التحميل الزائد)</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#مفهوم_الدوال_الخاصة_(الكتابة_فوق_الدوال)">مفهوم الدوال الخاصة (الكتابة فوق الدوال)</a>
+                    </li>
+                </ul>
+            </ul> -->
+        
+        </div>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="مقدمة">
+            <header>
+                <h2>
+                مقدمة
+                </h2>
+            </header>
+            <article>
+            <p>
+                لغة جافا هي لغة برمجية أُطلقت لأول مره في عام 1995 من قبل شركة sun. بدأت ببدايات بسيطة والان تتستخدم لأكثر من غرض وخدمة.
+            </p>
+            <p>
+                جافا تستخدم لأنشاء العديد من التطبيقات والتي يمكن تشغيلها على أكثر من نظام تشغيل أو بيئة تشغيل وذلك بفضل Java virtual machine (JVM)
+
+            </p>
+            <p>
+               <span class="bold">أين تستخدم جافا؟</span>
+               <ul>
+                    <li>
+                        بناء تطبيقات الحاسب وذلك بإستخدام مكتبات Java swing أو Java FX
+                    </li>
+                    <li>
+                        خدمات الشبكات وذلك بإستخدام مكتبات Java network أو Java IO
+                    </li>
+                    <li>
+                        بناء المواقع وذلك بإستخدام مفاهيم إطار Java EE مثل Servelt & JSP أو Jax-rs
+                    </li>
+               </ul>
+            </p>
+            </article>
+        </section>
+        <div class="section-container" id="الأساسيات">
+            <header><h2>الأساسيات</h2></header>
+            <section class="main-section" id="المتغيرات_و_العوامل">
+                <header><h3>المتغيرات و العوامل</h3></header>
+                <article>
+                    <h4 id="المتغيرات">المتغيرات</h4>
+                    <p>هو مكان لحفظ البيانات وأما أن تكون قيم متغيرة أو ثابتة كالمتغير x في الرياضيات للتعبير عن قيمة معينة.</p>
+                    <p>مثال على تعريف البيانات</p>
+                    <code>
+                        int number=1&semi;
+                    </code>
+                    <ul>
+                        <li>
+                            نلاحظ أن الكلمة <code class="snippet">int</code> هي كلمة من الكلمات المحجوزة في الجافا   للتعبير عن قيمة رقمية أو عددية صحيحة وتسمى نوع البيانات <span class="italic bold">Data type</span> 
+                        </li>
+                        <li>
+                            <span>number</span> هو اسم المتغير ومن قواعد تسمية المتغير 
+                            أن المتغير لايجب أن يبدأ رقم ولايتكون من حرف خاص مثل -,@,# الخ وقيمته 1 
+                            المعامل = لايعني المساواه ولكنه يعني الإسناد 
+                            <a class="go-to" href="#العوامل">أنظر للمعاملات</a>
+                        
+                        </li>
+                    </ul>
+                </article>
+                <article class="operator-section">
+                    <h4 id="العوامل">العوامل</h4>
+                    
+                    <p><span class="snippet">+</span> معامل الزايدة ويتسخدم لإضافة عدد على عدد أو في النصوص بمعنى الدمج </p>
+                    
+                    <p><span class="snippet">-</span> معامل الطرح ويستخدم لطرح ععدد من عدد</p>
+                    
+                    <p><span class="snippet">*</span> معامل الضرب ويستخدم لضرب الاعداد</p>
+                    
+                    <p><span class="snippet">/</span> معامل القسمة ويتسخدم لتقسيم الاعداد</p>
+                    
+                    <p><span class="snippet">=</span> معامل الإسناد يتسخدم لإسناد قيمة لمتغير</p>
+                    
+                    <p><span class="snippet">&lt;</span> معامل الأصغر من يستخدم للتحقق من قيمة العنصر إذا كان أصغر من العنصر الاخر</p>
+                    
+                    <p><span class="snippet">&gt;</span> معامل  الأكبر من يستخدم للتحقق من قيمة العنصر إذا كان أكبر من العنصر الاخر</p>
+                    
+                    <p><span class="snippet">&le;</span> معامل الأصغر من أو يساوي يستخدم  للتحقق من قيمة العنصر إذا كان أصغر من أو يساوي العنصر الاخر</p>
+                    
+                    <p><span class="snippet">&le;</span> معامل الأكبر من أو يساوي يستخدم  للتحقق من قيمة العنصر إذا كان أكبر من أو يساوي العنصر الاخر</p>
+                    
+                    <p><span class="snippet">==</span> معامل المساواة للتحقق من مساواة العناصر لبعضها البعض</p>
+
+                    <p><span class="snippet">!=</span> معامل عدم المساواة للتحقق من عدم مساواة العناصر</p>
+                    
+                    <p><span class="snippet">!</span> معامل النفي ويستخدم لنفي القيمة المنظقية للعنصر</p>
+                </article>
+                
+                <article class="operator-section">
+                    <h4>العوامل المختصرة</h4>
+                    <p><span class="snippet">var+=12</span> زيادة المتغير مع الرقم وتخزين الناتج في المتغير</p>
+
+                    <p><span class="snippet">var-=12</span> تنقيص الرقم من المتغير وتخزين الناتج في المتغير</p>
+                    
+                    <p><span class="snippet">var/=12</span> تقسيم المتغير على الرقم وتخزين الناتج في المتغير</p>
+                    
+                    <p><span class="snippet">var*=12</span> ضرب المتغير بالرقم وتخزين الناتج في المتغير</p>
+                    
+                    <p><span class="snippet">var++</span> زيادة المتغير بواحد وإضافتة في المتغير</p>
+                    
+                    <p><span class="snippet">var--</span> تنقيص المتغير بواحد وإضافتة في المتغير</p>
+                   
+                </article>
+            </section>
+
+            <section class="main-section" id="التكرار">
+                <header><h3>التكرار</h3></header>
+                <article>
+                    <p>التكرار هو عملية تكرار عمليه معينة لعدد من الخطوات او لمدة محددة والتكرار يستخدم لداء عملية معينة على قائمة من العناصر أو مجموعة من العناصر أو من الممكن إستخدام التكرار للبحث عن شيئ او عنصر ما طرق كتابة جمل التكرار:
+                    </p>
+                    <code>
+                        <span class="first-line">int sum =0;</span>
+                        <span class="second-line">for(int counter=0; counter&lt;=10; counter++){</span>
+                            <span class="third-line">sum+=counter;</span>
+                        <span>}</span>
+                    </code>
+                    <p>
+                        شرح الاوامر 
+                        <ol>
+                            <li>في الخطوة الأولى عرفنا متغير أسمة <code class="snippet">sum</code> و أسندنا له 0 لان الجمع على صفر لان يؤثر في بداية التكرار</li>
+                            <li>
+                                في الخطوة الثانية كتبنا جملة التكرار والتي تتكون من 
+                                <code class="snippet">for()</code> وهي كلمة محجوزة في اللغة بتعطي أمر التكرار وتأخذ من قيمة الى ثلاث قيم
+                                أول قيمة هو العداد 
+                                ثاني قيمة شرط توقف التكرار
+                                ثالث مقدار الزيادة في كل تكرار أي مقدار خطوات التكرار
+                                ففي حالتنا هنا سوف نبدأ التكرار من 0 حتى نصل الى 10 وتكون مقدار الزيادة او الخطوات بخطوة واحدة وهي ++
+                            </li>
+                            <li>
+                                في الخطوة الثالثة قمنا بجمع المتغير <code class="snippet">sum</code> مع كل رقم من 0 الى 10 ويتم تخزينه في المتغير
+                            </li>
+                        </ol>
+                    </p>
+
+                    <p class="bold">طرق كتابة التكرار : </p>
+                    <ul>
+                        <li>
+                            
+                            <p>بإستخدام جملة for</p> 
+                            <p>
+                                كما شاهدنا من قبل
+                                ومن الممكن تعريف المتغير خارج جملة for وايضا حجم الزيادة يمكن كتابتها بداخل الحلقة 
+                                كتالي : 
+                            </p>
+                            <code>
+                                <span> int variable=0;</span>
+                                <span>for(variable; condition){</span>
+                                <span> code... </span>
+                                <span>variable+=2; </span>
+                                <span>}</span>
+                            </code>
+                        </li>
+                        <li>
+                            <p>
+                                بإستخدام جملة while مثال :
+                            </p>
+                            <code>
+                                <span>int variable=0;</span>
+                                <span>while(condition){</span>
+                                <span>code... </span>
+                                <span>variable+=2; </span>
+                                <span>}</span>
+                            </code>
+                            <p>وتستخدم هذه الطريقة للتكرار عند شرط معين بطريقة مفهومة من دون الحاجة لكتابة القيم الثلاث في جملة التكرار مما يجعلها مفهومة عند القراءة</p>
+                        </li>
+                        <li>
+                            <p>
+                                بإستخدام جملة do/while مثال :
+                            </p>
+                            <code>
+                                <span>int variable=0;</span>
+                                <span>do{</span>
+                                <span>code..</span>
+                                <span>} while(condition)</span>
+                            </code>
+                            <p>وتستخدم هذه الطريقة عند الحاجة لتنفيذ الامر مرة واحدة على الاقل ومن ثم التحقق أمثلة على إستخداماتها طلب من المستخدم إدخال قيمة وعند إدخال قيمة غير مطلوبه يتم طلب مرة اخرى</p>
+                        </li>
+                    </ul>
+
+                </article>
+            </section>
+
+            <section class="main-section" id="الأوامر_الشرطية">
+                <header><h3>الأوامر الشرطية</h3></header>
+                <article>
+                    الأوامر الشرطية هي أوامر للتحقق من حالة معينة أو من أن الامر تحقق
+                    وكثيرا ما نحتاج العوامر الشرطية لإيقاف او تنفيذ أمر أخر طريقة كتابة الشرط 
+                    <code>
+                        if(condition)
+                        {
+                            code..
+                        }
+                    </code>
+                    مثال :
+                    <p>
+                        برنامج يطبع ناجح إذا كانت درجة الطالب أكبر من 60 وراسب إذا أقل من ذلك
+                    </p>
+                    <code>
+                        <span>1. float student_grade=70;</span>
+                        <span>2. if(student_grade>=60){</span>
+                        <span>3.    System.out.println("ناجح");
+                        }</span>
+                        <span>4. else System.out.println("راسب");</span>
+                    </code>
+                    <p>
+                        شرح الكود :
+                        <ol>
+                            <li>
+                                    في الخطوة الاولى عرفنا متغير اسمه  student_grade  ونوعه float اي عشري وقيمته 70
+                            </li>
+                            <li>
+                                في الخطوة الثانية الشرط 
+                            </li>
+                            <li>
+                                في الخطوة الثالثة جملة الطباعة
+                            </li>
+                            <li>
+                                في الخطوة الرابعة الحل او الشرط البديل 
+                            </li>
+                        </ol>
+                    </p>
+
+                    <p>
+                        <span class="bold">صور كتابة الاوامر الشرطية :</span>
+                        <ul>
+
+                            <li>
+                                <p>بإستخدام if الشرطية</p>
+                                <code>
+                                if(condition){
+                                    code..
+                                }
+                                </code>
+                                <p>
+                                    تستخدم لتحقق من حالة واحدة مع تنفيذ الاوامر بعد الشرط سواء تحقق او لا سيتم تنفيذ أي امر بعد الشرط
+                                </p>
+                            </li>
+                            <li>
+                                <p>بإستخدام if, else الشرطية</p>
+
+                                <code>
+                                <span>if(condition){
+                                        code..
+                                    }</span><span> else different code..</span>
+                                </code>
+                                <p>
+                                    تستخدم للتحديد إما الشرط أو نفذ أي أمر 
+                                </p>
+                            </li>
+                            <li>
+                                <p >بإستخدام if, else if, else الشرطية</p>
+
+                                <code>
+                                <span>if(condition){
+                                    code..
+                                }</span><span>else if(anotherConditon) {code..}</span>
+                                <span>else code..</span>
+                                </code>
+                                <p>
+                                    تستخدم لوصف أو للتحقق لأكثر من حالة
+                                </p>
+                            </li>
+                            <li>
+                                <p>بإستخدام switch</p>
+
+                                <code>
+                                    <span>switch(variable):</span>
+                                    <span>case 60:</span>
+                                    <span>case 70:</span>
+                                    <span>case 80:</span>
+                                    <span>case 90:</span>
+                                    <span>case 100:</span>
+                                        <span>System.out.println("ناجح");</span> 
+                                        </span> break;</span> 
+                                    <span>defualt:</span> 
+                                        <span>  System.out.println("راسب");</span>
+                                        <span>  break;</span>
+                                </code>
+                                <p>
+                                    تستخدم لتتحقق لأكثر من حالة محددة و مع نظام محدد بمعنى لو المتغير كان رقم فلابد التحقق يكون بشكل رقم ولايمكن التحقق بغير نوع المتغير
+                                </p>
+                            </li>
+                        </ul>
+                        
+                    </p>
+                </article>
+               
+
+            </section>
+
+            <section class="main-section" id="المصفوفات_والقوائم">
+                <header><h3>المصفوفات والقوائم</h3></header>
+                <article>
+
+                    <div>
+                        <p>المصفوفات هي أماكن لحفظ العناصر بشكل متتالي تخليها كقائمة لحفظ البيانات</p>
+                        <p>
+                            <span class="bold">مالفائدة منها؟</span>
+                            نستفيد منا في تخزين قيم أو عناصر متعددة في متغير واحد ومن الممكن التلاعب بالقيم أو البحث فيها أو إجراء أي عمليه عليها
+                        </p>
+                    </div>
+                    <div>
+                        <p>مثال عليها : </p>
+                        <code>
+                            <span>int myArr[] = {1,2,3,4}</span>
+                        </code>
+                        <ul>
+                            <p>شرح الكود :</p>
+                            <li>
+                               <p>كما عرغنا سابقا أن <span class="snippet">int</span> هو نوع المتغير و <span class="snippet">myArr</span> هو أسم المتغير لكن الاختلاف هنا هو هذا <span class="snippet">[ ]</span> هذا رمز لتعريف المتجرم أننا نريد أن نستخدم هذا المتغير كمصفوفة وقيمه هي لقيم المسندة اليه.</p>
+                               <p>هذه الطريقة تسمى اسناد قيم المصفوفة عند تعريفها.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="bold">طرق تعريف المصفوفة : </p>
+                        <ul>
+                            <li>
+                                <p>التعريف الخطي</p>
+                                <code>
+                                    <span>int[] myArr = {1,2,3,4} //1st way</span>
+                                    <span>
+                                        int myArr[] = {1,2,3,4} //2nd way
+                                    </span>
+                                </code>
+                                <p>
+                                     تستخدم هذه الطريقة عندما لا تريد إسناد قيم ديناميكيه أي أنها تعتمد على عوامل أخرى أما أن يدخلها المستخدم او يتم 
+                                     جلبها من قاعدة البيانات
+                                     ويكون حجم المصفوفة في هذه الحالة بعدد العناصر المندة ويكون ثابت لايتغير
+                                </p>
+                            </li>
+
+                            <li>
+                                <p class="bold">تعريف مصفوفة فارغة وإدخال بياناتها لاحقا</p>
+                                <code>
+                                    <span>char[] charachters= new char[12]</span>
+                                </code>
+                                <p>
+                                    تستخدم هذه الطريقة عندما تريد أن تسند قيمها بناء على عمليه معينة، وتكون طريقة الاضافة فيها كالتالي. 
+                                </p>
+                                <code>
+                                    <span>//Variable[index]=value</span>
+                                    charachters[0]='c';
+                                    charachters[1]='h';
+                                    charachters[2]='a';
+                                    ...
+                                </code>
+                                <p>ملاحظة أول عنصر في المصفوفة يبدأ من 0 واخر عنصر اقل من حجم المصفوفة بواحد</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p>مثال عملي</p>
+                    </div>
+                </article>
+            </section>
+
+            <section class="main-section" id="الدوال">
+                <header><h3>الدوال</h3></header>
+                <article>
+                    <div>
+                        <p>الدوال عبارة عن جزئيات أو صندوق من الاوامر يمكن استخدامه أكثر من مره دون الحاجة لإعادة كتابة الاوامر مرة تلو الاخر في كل البرنامج ومن فوائده أن يجعلنا نقسم اي مشكلة الى مهام كل دالة تحل مهمة معينة وهذا مفهوم مهم في حل المشاكل وفي البرمجة خصوصا ويسمى <span class="bold">divide and concore</span>
+                        </p>
+                    </div>
+                    <div>
+                        <p class="bold">مثال يوضح كيفية كتابة الدوال</p>
+                        <code>
+                            public static void FunctionName(parameters)
+                        </code>
+                        <ul>
+                            <p>شرح الكود</p>
+                            <li>
+                                <p>
+                                    الكلمة <span class="snippet">public</span> هي بما يعرف باحقيات الوصول أو <span>Access modifiers</span>
+                                    وهي بإختصار تمنحنا صلاحية الوصول لهذه الدالة من أي مكان
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    الكلمة <span class="snippet">static</span> هي كلمة ثابتة تدل على إمكانية الوصول لهذه الدالة دون الحاجة لإنشاء عنصر لإستدعائها منه أي من العنصر 
+                                    وهذه الكلمة هي متعلقة <span class="oop-hovering">
+                                        بمفاهيم البرمجة الكائنية التوجة OOP
+                                    </span>
+                                    <a href="https://www.w3schools.com/java/java_oop.asp" target="_blank">لمزيد من التفاصيل</a>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+        </div>
+        <section id="resource">
+            <h2>مراجع</h2>
+            <ul>
+                <li>
+                    <a href="https://docs.oracle.com/javase/tutorial/tutorialLearningPaths.html" target="_blank">الموقع الرسمي</a>
+                </li>
+                <li>
+                    <a href="https://www.geeksforgeeks.org/java/?ref=shm" target="_blank">موقع geeksforgeeks</a>
+                </li>
+                <li>
+                    <a href="https://www.javatpoint.com/java-tutorial" target="_blank" >موقع javatpoint</a>
+                </li>
+            </ul>
+        </section> 
+        <!-- <div class="section-container" id="البرمجة_الموجهه_للعناصر_OOP">
+            <header><h2>البرمجة الموجهه للعناصر <span class="oop-hovering">OOP</span></h2></header>
+
+            <section class="main-section" id="مفهوم_العنصر_أو_الكائن">
+                <header><h3>مفهوم العنصر أو الكائن</h3></header>
+                <article></article>
+            </section>
+    
+            <section class="main-section" id="مفهوم_الفئة_أو_المجموعة">
+                <header><h3>مفهوم الفئة أو المجموعة</h3></header>
+                <article></article>
+            </section>
+    
+            <section class="main-section" id="الوراثة">
+                <header><h3>الوراثة</h3></header>
+                <article></article>
+            </section>
+    
+            <section class="main-section" id="النموذج">
+                <header><h3>النموذج</h3></header>
+                <article></article>
+            </section>
+    
+            <section class="main-section" id="مفهوم_تعدد_الدوال_(التحميل_الزائد)">
+                <header><h3>مفهوم تعدد الدوال (التحميل الزائد)</h3></header>
+                <article></article>
+            </section>
+            <section class="main-section" id="مفهوم_الدوال_الخاصة_(الكتابة_فوق_الدوال)">
+                <header><h3>مفهوم الدوال الخاصة (الكتابة فوق الدوال)</h3></header>
+                <article></article>
+            </section>
+        </div> -->
+    </main>
+</body>
+</html>

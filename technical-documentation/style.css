@@ -1,0 +1,189 @@
+
+html{
+    direction: rtl;
+    font-family: 'Noto Sans Arabic', sans-serif;
+    scroll-behavior: smooth;
+    
+}
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+a{
+    /* color: #C69749; */
+    color: inherit;
+    text-decoration: none;
+
+}
+a.nav--main{
+    font-size: 1.178rem;
+    font-weight: 700;
+}
+ul,ol{
+    list-style: none;
+}
+code{
+    direction: ltr;
+    display: block;
+    background-color: rgb(46, 46, 46);
+    padding: 1em ;
+    margin: 10px 0;
+    color: white;
+}
+nav{
+    padding: 1.5em 2.5em;
+    border-bottom: 0.5px solid #000;
+    
+}
+.nav-container ul>ul{
+    list-style: decimal;
+    color: inherit;
+}
+.nav-container > ul > ul li{
+    margin-right: 1em;
+    /* padding: 0 0.9em; */
+}
+.nav-container> ul> li:not(li:nth-of-type(2)){
+    margin-top: 0.7em;
+}
+nav header{
+    font-size: 20px;
+}
+main{
+    margin: 15px 0;
+}
+main>section, .section-container{
+    margin: 1em 2.5em;
+}
+
+h1,h2,
+.nav--main {
+    color: #61dafb;
+}
+.main-section>article{
+    margin-top:15px
+}
+.operator-section>p{
+    margin: 5px 0;
+}
+
+.first-line::before{
+    content: "1. ";
+    color: #FB2576;
+}
+.second-line::before{
+    content: "2. ";
+    color: #FB2576;
+
+}
+.third-line::before{
+content: "3. ";
+color: #FB2576;
+}
+
+#التكرار code> span:last-child::before{
+    content: " ";
+    margin: 10px;
+}
+#التكرار ol >li{
+    margin: 10px 5px;
+}
+code>span{
+    display: block;
+}
+main .main-section article ul li code{
+    text-align: justify;
+}
+
+main .main-section article ul li:not(li:first-child){
+    margin-top: 10px;
+}
+main .main-section article ul li{
+   
+    margin-right: 1em;
+    list-style: arabic-indic;
+}
+#الدوال a{
+    text-decoration: underline;
+}
+#resource{
+    padding: 1em;
+    margin: 2em 1em 0;
+}
+#resource > ul {
+    font-weight: 500;
+    margin-right:1em ;
+    text-decoration: underline;
+
+}
+.medium{
+    font-weight: 500;
+}
+.bold{
+    font-weight: 700;
+}
+.snippet{
+    display: inline-block;
+    padding:5px 15px;
+    border-radius: 5px;
+    background-color: rgb(46, 46, 46);
+    color: white;
+}
+code.snippet{
+    display: inline-block;
+    margin: 0;
+   
+}
+
+.oop-hovering{
+    cursor: help;
+}
+.oop-hovering:hover::after{
+    position: absolute;
+    content: "Object orianted programming";
+    width: max-content;
+    padding: 0 1em;
+    font-size: 8px;
+    font-weight: 300;
+    background-color: gainsboro;
+    outline: 1px solid black;
+    border-radius: 3px;
+    color: black;
+}
+
+@media (min-width:800px) {
+    body{
+        display: flex;
+        position: relative;
+        margin: 0;
+    }
+    nav,main{
+        padding: 1em;
+
+    }
+    nav{
+        border-left: 1px solid white;
+        flex-shrink: 0;
+        flex-basis: calc(100vw / 4);
+        background: hsl(222, 14%, 10%);
+        color: white;  
+    }
+   
+
+    main{
+        margin-top: 0;
+        flex-grow: 0;
+
+    }
+    .nav-container{
+        position: sticky;
+        top: 0;
+        right: 0;
+        height: max-content;
+        overflow-y: visible ;
+
+    }
+
+
+}
